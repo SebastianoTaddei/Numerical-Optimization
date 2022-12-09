@@ -1,10 +1,17 @@
 classdef DekkerBrent < handle
     %DEKKERBRENT DekkerBrent method to find a root of a function
     %   Properties:
-    %    - 
-    %
-    %   Output values.
-    %    - 
+    %    - max_iter -> maximum number of iterations
+    %    - tol      -> tolerance for the solution
+    %    - verbose  -> verbosity of the solver:
+    %                   - 0 -> silent;
+    %                   - 1 -> show iterations.
+    %    - fun      -> function to find the root of
+    %    - lb       -> lower bound of the range to look for the root
+    %    - ub       -> upper bound of the range to look for the root
+    %    - x_last   -> last root found
+    %    - iter     -> last iteration
+    %    - flag     -> convergence flag
     
     properties (SetAccess = private, Hidden = true)
         max_iter % maximum number of iterations
