@@ -5,7 +5,7 @@ dfx_a = feval(dfun, x0 + alpha*p)'*p;
 
 if abs(dfx_a) >= abs(obj.c2*dfx0_p)
     return;
-else
+elseif alpha == 1
     while alpha <= obj.a_max
         alpha_prev = alpha;
         fx_prev    = fx_next;
