@@ -32,6 +32,7 @@ for i = 1:obj.max_iter
     % Conjugate direction method
     alpha    = LS.search(fun, dfun, fx, dfx, x, p);
     x        = x + alpha*p;
+    fx       = feval(fun, x);
     dfx_next = feval(dfun, x);
 
     % Report iteration
